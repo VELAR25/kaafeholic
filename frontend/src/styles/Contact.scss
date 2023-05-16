@@ -1,0 +1,93 @@
+@import "colors";
+
+.contact {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-image: url("../assets/gradient.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+
+  > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-color: white;
+    height: 80%;
+
+    > h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-family: "Roboto";
+      color: black;
+      margin: 2rem 0;
+    }
+
+    > input,
+    > textarea,
+    > button {
+      border-radius: 5px;
+      padding: 0.8rem;
+      outline: none;
+      border: 1px solid rgb(162, 162, 162);
+      margin: 0.5rem;
+      width: 60%;
+    }
+
+    > button {
+      background-color: $dark;
+      color: white;
+      padding: 0.6rem;
+      font-size: 1.3rem;
+      letter-spacing: 0.5rem;
+      transition: all 0.7s;
+      font-weight: 1000;
+
+      &:hover {
+        background-color: $sky;
+        color: black;
+      }
+    }
+  }
+
+  .formBorder {
+    width: 200px;
+    height: 80%;
+    background-color: white;
+    border-radius: 0 200px 200px 0;
+    position: relative;
+
+    > div {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 50%;
+      transform: translate(50%, -50%);
+
+      > img {
+        width: 100%;
+        border-radius: 50%;
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    height: 70vh;
+    > form {
+      width: 100%;
+      height: 100%;
+    }
+
+    > .formBorder {
+      display: none;
+    }
+  }
+}

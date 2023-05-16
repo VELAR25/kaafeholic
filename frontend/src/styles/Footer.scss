@@ -1,0 +1,64 @@
+@import "colors";
+
+footer {
+  min-height: 300px;
+  background-color: $dark;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  color: white;
+  align-items: center;
+}
+
+h2 {
+  color: $sky;
+  font-size: 2.2rem;
+  font-family: 800;
+  font-family: Caveat;
+  letter-spacing: 10px;
+}
+
+footer > div > p,
+strong,
+em {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+footer > div > strong {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+aside {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    font-size: 1.6rem;
+    color: $sky;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    font-family: caveat;
+  }
+
+  a {
+    margin: 0.2rem;
+    font-size: 2rem;
+    color: white;
+
+    &:hover {
+      color: $sky;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    grid-template-columns: 1fr;
+    height: 800px;
+    text-align: center;
+  }
+}

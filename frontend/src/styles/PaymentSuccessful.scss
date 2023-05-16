@@ -1,0 +1,63 @@
+@import "colors";
+
+.paymentSuccessful {
+  background-color: rgb(197, 229, 255);
+  height: 70vh;
+  width: 100%;
+  padding: 1rem;
+  > main {
+    background-color: white;
+    max-width: 900px;
+    margin: auto;
+    height: 100%;
+
+    > div {
+      display: flex;
+      //   height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      > h1 {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 1rem;
+        padding: 1rem;
+        font: 400 3rem "Roboto";
+      }
+
+      > p {
+        text-align: center;
+        margin: 0.5rem;
+        padding: 0.5rem 1rem;
+      }
+
+      > a {
+        text-align: center;
+        color: white;
+        background-color: $blue;
+        border-radius: 5px;
+        border: none;
+        font: 300 1rem sans-serif;
+        outline: none;
+        padding: 0.4rem 0.8rem;
+        margin: 0.5rem;
+
+        &:hover {
+          background-color: $sky;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .paymentSuccessful > main > div {
+    width: 100%;
+
+    > a {
+      width: 70%;
+    }
+  }
+}
